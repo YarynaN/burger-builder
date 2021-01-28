@@ -20,7 +20,7 @@ const modal = (props) => {
     );
 }
 const willUpdate = (prevProps, nextProps) => {
-    return prevProps.show === nextProps.show || prevProps.children === nextProps.children;
+    return prevProps.show === nextProps.show && prevProps.children === nextProps.children;
 }
 
 export default React.memo(modal, willUpdate);
